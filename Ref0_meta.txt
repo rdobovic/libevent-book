@@ -1,7 +1,6 @@
 :docinfo:
 
-The Libevent Reference Manual: Preliminaries
-============================================
+= The Libevent Reference Manual: Preliminaries =
 
 // Include license if this is not a book, if this is a book,
 // don't include it since it is included on one of the first pages
@@ -12,8 +11,7 @@ endif::[]
 
 :language: C
 
-Libevent from 10,000 feet
--------------------------
+== Libevent from 10,000 feet ==
 
 Libevent is a library for writing fast portable nonblocking IO.  Its
 design goals are:
@@ -76,8 +74,7 @@ evrpc::
 
 
 
-The Libraries
--------------
+== The Libraries ==
 
 When Libevent is built, by default it installs the following
 libraries:
@@ -141,8 +138,7 @@ Structure headers::
 'event2' directory.  See "If you have to work with an old version of
 Libevent" below.)
 
-If you have to work with an old version of Libevent
----------------------------------------------------
+== If you have to work with an old version of Libevent ==
 
 Libevent 2.0 has revised its APIs to be generally more rational and
 less error-prone.  If it's possible, you should write new programs to
@@ -180,8 +176,7 @@ Some other notes on working with older versions:
 Individual sections below will discuss the obsolete APIs that you
 might encounter for specific areas of the codebase.
 
-Notes on version status
-~~~~~~~~~~~~~~~~~~~~~~~
+=== Notes on version status ===
 
 Versions of Libevent before 1.4.7 or so should be considered totally
 obsolete.  Versions of Libevent before 1.3e or so should be considered

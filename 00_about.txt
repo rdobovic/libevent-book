@@ -1,7 +1,6 @@
 :docinfo:
 
-About this document
-===================
+= About this document =
 
 // Include license if this is not a book, if this is a book,
 // don't include it since it is included on one of the first pages
@@ -20,8 +19,7 @@ portable asynchronous network IO programs in C.  We assume:
   connect(), and so on).
 
 
-A note on examples
-------------------
+== A note on examples ==
 
 The examples in this document should work all right on Linux, FreeBSD,
 OpenBSD, NetBSD, Mac OS X, Solaris, and Android. Some of the examples

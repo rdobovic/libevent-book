@@ -1,7 +1,6 @@
 :docinfo:
 
-Working with an event loop
-==========================
+= Working with an event loop =
 
 // Include license if this is not a book, if this is a book,
 // don't include it since it is included on one of the first pages
@@ -12,8 +11,7 @@ endif::[]
 
 :language: C
 
-Running the loop
-----------------
+== Running the loop ==
 
 Once you have an event_base with some events registered (see the next section
 about how to create and register events), you will want Libevent to wait for
@@ -97,8 +95,7 @@ or until event_base_loopbreak() or event_base_loopexit() is called.
 These functions are defined in <event2/event.h>.  They have existed since
 Libevent 1.0.
 
-Stopping the loop
------------------
+== Stopping the loop ==
 
 If you want an active event loop to stop running before all events are
 removed from it, you have two slightly different functions you can call.
@@ -208,8 +205,7 @@ These functions are declared in <event2/event.h>.  The event_break_loopexit()
 function was first implemented in Libevent 1.0c; event_break_loopbreak() was
 first implemented in Libevent 1.4.3.
 
-Re-checking for events
-----------------------
+== Re-checking for events ==
 
 Ordinarily, Libevent checks for events, then runs all the active events
 with the highest priority, then checks for events again, and so on.  But
@@ -230,8 +226,7 @@ running event callbacks.
 This function was introduced in Libevent 2.1.2-alpha.
 
 
-Checking the internal time cache
---------------------------------
+== Checking the internal time cache ==
 
 Sometimes you want to get an approximate view of the current time inside
 an event callback, and you want to get it without calling gettimeofday()
@@ -271,8 +266,7 @@ The event_base_gettimeofday_cached() function was new in Libevent
 2.0.4-alpha.  Libevent 2.1.1-alpha added event_base_update_cache_time().
 
 
-Dumping the event_base status
------------------------------
+== Dumping the event_base status ==
 
 .Interface
 [code,C]
@@ -289,8 +283,7 @@ versions of Libevent.
 
 This function was introduced in Libevent 2.0.1-alpha.
 
-Running a function over every event in an event_base
-----------------------------------------------------
+== Running a function over every event in an event_base ==
 
 .Interface
 [code,C]
@@ -325,8 +318,7 @@ doesn't take a long time.
 
 This function was added in Libevent 2.1.2-alpha.
 
-Obsolete event loop functions
------------------------------
+== Obsolete event loop functions ==
 
 As discussed above, older versions of Libevent APIs had a global
 notion of a "current" event_base.

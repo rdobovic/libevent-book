@@ -1,7 +1,6 @@
 :docinfo:
 
-Connection listeners: accepting TCP connections
-===============================================
+= Connection listeners: accepting TCP connections =
 
 // Include license if this is not a book, if this is a book,
 // don't include it since it is included on one of the first pages
@@ -19,8 +18,7 @@ All the functions and types in this section are declared in
 event2/listener.h.  They first appeared in Libevent 2.0.2-alpha, unless
 otherwise noted.
 
-Creating or freeing an evconnlistener
--------------------------------------
+== Creating or freeing an evconnlistener ==
 
 .Interface
 [code,C]
@@ -65,8 +63,7 @@ blocking mode, undefined behavior might occur.]
 
 To free a connection listener, pass it to evconnlistener_free().
 
-Recognized flags
-~~~~~~~~~~~~~~~~
+=== Recognized flags ===
 
 These are the flags you can pass to the 'flags' argument of the
 evconnlistener_new() function.  You can give any number of these, OR'd
@@ -113,8 +110,7 @@ LEV_OPT_DEFERRED_ACCEPT::
     connection. Not all operating systems support this option: on ones that
     don't, this option has no effect.  New in Libevent 2.1.1-alpha.
 
-The connection listener callback
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== The connection listener callback ===
 
 .Interface
 [code,C]
@@ -131,8 +127,7 @@ the connection was received and the length of that address
 respectively.  The 'ptr' argument is the user-supplied pointer that
 was passed to evconnlistener_new().
 
-Enabling and disabling an evconnlistener
-----------------------------------------
+== Enabling and disabling an evconnlistener ==
 
 .Interface
 [code,C]
@@ -143,8 +138,7 @@ int evconnlistener_enable(struct evconnlistener *lev);
 
 These functions temporarily disable or reenable listening for new connections.
 
-Adjusting an evconnlistener's callback
---------------------------------------
+== Adjusting an evconnlistener's callback ==
 
 .Interface
 [code,C]
@@ -156,8 +150,7 @@ void evconnlistener_set_cb(struct evconnlistener *lev,
 This function adjusts the callback and callback argument of an existing
 evconnlistener.  It was introduced in 2.0.9-rc.
 
-Inspecting an evconnlistener
-----------------------------
+== Inspecting an evconnlistener ==
 
 .Interface
 [code,C]
@@ -171,8 +164,7 @@ respectively.
 
 The evconnlistener_get_fd() function first appeared in Libevent 2.0.3-alpha.
 
-Detecting errors
-----------------
+== Detecting errors ==
 
 You can set an error callback that gets informed whenever an accept() call
 fails on the listener.  This can be important to do if you're facing an error
@@ -193,8 +185,7 @@ argument passed as 'ptr' to evconnlistener_new() as its second argument.
 
 This function was introduced in Libevent 2.0.8-rc.
 
-Example code: an echo server.
------------------------------
+== Example code: an echo server. ==
 
 //BUILD: SKIP
 .Example

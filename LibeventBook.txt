@@ -2,8 +2,7 @@
 :this-is-a-book: yes
 :toc:
 
-Fast portable non-blocking network programming with Libevent
-============================================================
+= Fast portable non-blocking network programming with Libevent =
 
 ------
 include::license.txt[]
