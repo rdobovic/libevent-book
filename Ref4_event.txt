@@ -3,7 +3,12 @@
 Working with events
 ===================
 
-include::license.txt[]
+// Include license if this is not a book, if this is a book,
+// don't include it since it is included on one of the first pages
+
+ifndef::this-is-a-book[]
+    include::license.txt[]
+endif::[]
 
 :language: C
 
@@ -542,7 +547,7 @@ executed.
 [code,C]
 --------
 int event_remove_timer(struct event *ev);
----------
+--------
 
 Finally, you can remove a pending event's timeout completely without
 deleting its IO or signal components.  If the event had no timeout

@@ -3,7 +3,12 @@
 Bufferevents: concepts and basics
 =================================
 
-include::license.txt[]
+// Include license if this is not a book, if this is a book,
+// don't include it since it is included on one of the first pages
+
+ifndef::this-is-a-book[]
+    include::license.txt[]
+endif::[]
 
 :language: C
 
@@ -880,7 +885,7 @@ Libevent 2.0:
 | BEV_EVENT_TIMEOUT          | EVBUFFER_TIMEOUT
 | bufferevent_get_input(b)   | EVBUFFER_INPUT(b)
 | bufferevent_get_output(b)  | EVBUFFER_OUTPUT(b)
-|=============================
+|==============================
 
 The old functions were defined in event.h, not in event2/bufferevent.h.
 

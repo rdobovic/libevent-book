@@ -3,7 +3,12 @@
 Helper functions and types for Libevent
 =======================================
 
-include::license.txt[]
+// Include license if this is not a book, if this is a book,
+// don't include it since it is included on one of the first pages
+
+ifndef::this-is-a-book[]
+    include::license.txt[]
+endif::[]
 
 :language: C
 
@@ -57,7 +62,7 @@ versions of the bit-width-specific integers from stdint.h:
 |ev_int16_t  |16     |Yes    | EV_INT16_MAX  | EV_INT16_MIN
 |ev_uint8_t  |8      |No     | EV_UINT8_MAX  | 0
 |ev_int8_t   |8      |Yes    | EV_INT8_MAX   | EV_INT8_MIN
-|=============================
+|==============================
 
 As in the C99 standard, each type has exactly the specified width, in
 bits.

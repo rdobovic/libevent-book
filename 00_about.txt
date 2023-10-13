@@ -3,7 +3,12 @@
 About this document
 ===================
 
-include::license.txt[]
+// Include license if this is not a book, if this is a book,
+// don't include it since it is included on one of the first pages
+
+ifndef::this-is-a-book[]
+    include::license.txt[]
+endif::[]
 
 :language: C
 

@@ -3,7 +3,12 @@
 Using DNS with Libevent: high and low-level functionality
 =========================================================
 
-include::license.txt[]
+// Include license if this is not a book, if this is a book,
+// don't include it since it is included on one of the first pages
+
+ifndef::this-is-a-book[]
+    include::license.txt[]
+endif::[]
 
 :language: C
 
@@ -648,7 +653,7 @@ it has no records of the requested type.)
 The errors codes that can be passed to the callback are as follows:
 
 .DNS Errors
-[options="header",width="70%"
+[options="header",width="70%"]
 |================
 | Code                | Meaning
 |DNS_ERR_NONE         | No error occurred
